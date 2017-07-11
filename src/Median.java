@@ -76,6 +76,33 @@ public class Median {
 		}
 		return dp[s.length()][p.length()];
 	}
+	
+	/*binary tree maximum path sum*/
+	
+	static int maxvalue;
+	
+	
+	
+	public static int maxsum(TreeNode root)
+	{
+		maxvalue=Integer.MIN_VALUE;
+		max_traverse(root);
+		return maxvalue;
+		
+	}
+	
+	public static void  max_traverse(TreeNode root)
+	{
+		if(root == null)
+			return;
+			//return 0;
+		int left = Math.max(0, root.left.val);
+		int right = Math.max(0, root.right.val);
+		maxvalue = Math.max(maxvalue,left+right+root.val);
+		//return Math.max(left, right)+root.val;
+	}
+	
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -84,10 +111,18 @@ public class Median {
 		int [] array2 = {2};
 		System.out.println(MedianSortedArrays(array1,array2));*/
 		
-		/*regular expression matching*/
+		/*regular expression matching
 		String s1="aab";
 		String s2="c*a*b";
-		System.out.println(isMatch(s1,s2));
+		System.out.println(isMatch(s1,s2));*/
+		
+		TreeNode rt = new TreeNode(1);
+		TreeNode rt1 = new TreeNode(2);
+		TreeNode rt2 = new TreeNode(3);
+		rt.setleft(rt1);
+		rt.setright(rt2);
+		max_traverse(rt);
+		System.out.println(maxvalue);
 	}
 
 }
