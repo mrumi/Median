@@ -14,11 +14,11 @@ public class TreeNode
 		
 		public void setright(TreeNode n)
 		{
-			
+			right = n;
 		}
 		
 		public void setleft(TreeNode n)
 		{
-			
+			left = n;
 		}
 	}
