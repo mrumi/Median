@@ -8,8 +8,8 @@ public class TreeNode
 		TreeNode(int x)
 		{
 			val=x;
-			right=n;
-			left=n;
+			right=null;
+			left=null;
 		}
 		
 		public void setright(TreeNode n)
