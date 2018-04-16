@@ -8,15 +8,17 @@ public class TreeNode
 		TreeNode(int x)
 		{
 			val=x;
+			right=n;
+			left=n;
 		}
 		
 		public void setright(TreeNode n)
 		{
-			right=n;
+			
 		}
 		
 		public void setleft(TreeNode n)
 		{
-			left=n;
+			
 		}
 	}
